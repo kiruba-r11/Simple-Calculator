@@ -25,4 +25,11 @@ A simple calculator app using TextViews and Buttons which can perform five basic
   </tr>
 </table>
 
+## Screenshots of the App
+<table>
+  <tr>
+    <td> <img src = "screenshots/calculator_ui.jpg" height="380" width="210"> </td>
+  </tr>
+</table>
+
 **_Note:_ This `Simple Calculator` App works only for two operands (without error).**
