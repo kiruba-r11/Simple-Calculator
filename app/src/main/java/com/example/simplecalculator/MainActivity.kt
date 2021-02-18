@@ -46,55 +46,55 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         when (v.id) {
             R.id.button0 -> {
-                textView.text = textView.text.toString() + "0"
+                textView.text = "${textView.text}0"
 
             }
             R.id.button1 -> {
-                textView.text = textView.text.toString() + "1"
+                textView.text = "${textView.text}1"
 
             }
             R.id.button2 -> {
-                textView.text = textView.text.toString() + "2"
+                textView.text = "${textView.text}2"
 
             }
 
             R.id.button3 -> {
-                textView.text = textView.text.toString() + "3"
+                textView.text = "${textView.text}3"
 
             }
 
             R.id.button4 -> {
-                textView.text = textView.text.toString() + "4"
+                textView.text = "${textView.text}4"
 
             }
 
             R.id.button5 -> {
-                textView.text = textView.text.toString() + "5"
+                textView.text = "${textView.text}5"
 
             }
 
             R.id.button6 -> {
-                textView.text = textView.text.toString() + "6"
+                textView.text = "${textView.text}6"
 
             }
 
             R.id.button7 -> {
-                textView.text = textView.text.toString() + "7"
+                textView.text = "${textView.text}7"
 
             }
 
             R.id.button8 -> {
-                textView.text = textView.text.toString() + "8"
+                textView.text = "${textView.text}8"
 
             }
 
             R.id.button9 -> {
-                textView.text = textView.text.toString() + "9"
+                textView.text = "${textView.text}9"
 
             }
 
             R.id.dotButton -> {
-                textView.text = textView.text.toString() + "."
+                textView.text = "${textView.text}."
             }
 
             R.id.acButton -> {
@@ -138,27 +138,26 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 try {
                     when (operation) {
                         Operations.Addition.name -> {
-                            textView.text = (Value1 + Value2).toString()
+                            textView.text = ((Value1 + Value2).toString())
 
                         }
 
                         Operations.Subtraction.name -> {
-                            textView.text = (Value1 - Value2).toString()
+                            textView.text = ((Value1 - Value2).toString())
 
                         }
 
                         Operations.Multiplication.name -> {
-                            textView.text = (Value1 * Value2).toString()
+                            textView.text = ((Value1 * Value2).toString())
 
                         }
 
                         Operations.Division.name -> {
-                            textView.text = (Value1 / Value2).toString()
+                            textView.text = ((Value1 / Value2).toString())
 
                         }
-
                         Operations.Mod.name -> {
-                            textView.text = (Value1 % Value2).toString()
+                            textView.text = ((Value1 % Value2).toString())
 
                         }
                     }
@@ -169,6 +168,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             else -> {
+                textView.text = ""
+
             }
         }
     }
