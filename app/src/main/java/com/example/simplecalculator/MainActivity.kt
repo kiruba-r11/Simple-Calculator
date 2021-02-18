@@ -9,8 +9,8 @@ import java.math.BigDecimal
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    var Value1 = BigDecimal.ZERO
-    var Value2 = BigDecimal.ZERO
+    private var operand1 = BigDecimal.ZERO
+    private var operand2 = BigDecimal.ZERO
     var operation = ""
 
 
@@ -102,62 +102,62 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.addButton -> {
-                Value1 = (textView.text.toString()).toBigDecimal()
+                operand1 = (textView.text.toString()).toBigDecimal()
                 operation = Operations.Addition.name
                 textView.text = null
             }
 
             R.id.subButton -> {
-                Value1 = (textView.text.toString()).toBigDecimal()
+                operand1 = (textView.text.toString()).toBigDecimal()
                 operation = Operations.Subtraction.name
                 textView.text = null
             }
 
             R.id.mulButton -> {
-                Value1 = (textView.text.toString()).toBigDecimal()
+                operand1 = (textView.text.toString()).toBigDecimal()
                 operation = Operations.Multiplication.name
                 textView.text = null
             }
 
             R.id.divButton -> {
-                Value1 = (textView.text.toString()).toBigDecimal()
+                operand1 = (textView.text.toString()).toBigDecimal()
                 operation = Operations.Division.name
                 textView.text = null
 
             }
 
             R.id.modButton -> {
-                Value1 = (textView.text.toString()).toBigDecimal()
+                operand1 = (textView.text.toString()).toBigDecimal()
                 operation = Operations.Mod.name
                 textView.text = null
             }
 
             R.id.equalButton -> {
-                Value2 = (textView.text.toString()).toBigDecimal()
+                operand2 = (textView.text.toString()).toBigDecimal()
 
                 try {
                     when (operation) {
                         Operations.Addition.name -> {
-                            textView.text = ((Value1 + Value2).toString())
+                            textView.text = ((operand1 + operand2).toString())
 
                         }
 
                         Operations.Subtraction.name -> {
-                            textView.text = ((Value1 - Value2).toString())
+                            textView.text = ((operand1 - operand2).toString())
 
                         }
 
                         Operations.Multiplication.name -> {
-                            textView.text = ((Value1 * Value2).toString())
+                            textView.text = ((operand1 * operand2).toString())
 
                         }
 
                         Operations.Division.name -> {
-                            textView.text = ((Value1 / Value2).toString())
+                            textView.text = ((operand1 / operand2).toString())
 
                         }
                         Operations.Mod.name -> {
-                            textView.text = ((Value1 % Value2).toString())
+                            textView.text = ((operand1 % operand2).toString())
 
                         }
                     }
