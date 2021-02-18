@@ -102,34 +102,48 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.addButton -> {
-                operand1 = (textView.text.toString()).toBigDecimal()
-                operation = Operations.Addition.name
-                textView.text = null
+                if (!(textView.text.toString()).isNullOrEmpty()) {
+                    operand1 = (textView.text.toString()).toBigDecimal()
+                    operation = Operations.Addition.name
+                    textView.text = null
+                } else {
+                    textView.text = "+"
+                }
             }
 
             R.id.subButton -> {
-                operand1 = (textView.text.toString()).toBigDecimal()
-                operation = Operations.Subtraction.name
-                textView.text = null
+                if (!(textView.text.toString()).isNullOrEmpty()) {
+                    operand1 = (textView.text.toString()).toBigDecimal()
+                    operation = Operations.Subtraction.name
+                    textView.text = null
+                } else {
+                    textView.text = "-"
+                }
             }
 
             R.id.mulButton -> {
-                operand1 = (textView.text.toString()).toBigDecimal()
-                operation = Operations.Multiplication.name
-                textView.text = null
+                if (!(textView.text.toString()).isNullOrEmpty()) {
+                    operand1 = (textView.text.toString()).toBigDecimal()
+                    operation = Operations.Multiplication.name
+                    textView.text = null
+                }
             }
 
             R.id.divButton -> {
-                operand1 = (textView.text.toString()).toBigDecimal()
-                operation = Operations.Division.name
-                textView.text = null
+                if (!(textView.text.toString()).isNullOrEmpty()) {
+                    operand1 = (textView.text.toString()).toBigDecimal()
+                    operation = Operations.Division.name
+                    textView.text = null
+                }
 
             }
 
             R.id.modButton -> {
-                operand1 = (textView.text.toString()).toBigDecimal()
-                operation = Operations.Mod.name
-                textView.text = null
+                if (!(textView.text.toString()).isNullOrEmpty()) {
+                    operand1 = (textView.text.toString()).toBigDecimal()
+                    operation = Operations.Mod.name
+                    textView.text = null
+                }
             }
 
             R.id.equalButton -> {
