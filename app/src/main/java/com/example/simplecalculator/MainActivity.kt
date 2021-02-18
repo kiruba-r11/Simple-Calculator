@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         subButton.setOnClickListener(this)
         mulButton.setOnClickListener(this)
         divButton.setOnClickListener(this)
+        modButton.setOnClickListener(this)
         equalButton.setOnClickListener(this)
     }
 
@@ -110,7 +111,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 Value1 = (textView.text.toString()).toBigDecimal()
                 operation = Operations.Subtraction.name
                 textView.text = null
-
             }
 
             R.id.mulButton -> {
@@ -124,6 +124,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 operation = Operations.Division.name
                 textView.text = null
 
+            }
+
+            R.id.modButton -> {
+                Value1 = (textView.text.toString()).toBigDecimal()
+                operation = Operations.Mod.name
+                textView.text = null
             }
 
             R.id.equalButton -> {
@@ -151,7 +157,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
                         }
 
-                        Operations.Mod.name ->{
+                        Operations.Mod.name -> {
                             textView.text = (Value1 % Value2).toString()
 
                         }
