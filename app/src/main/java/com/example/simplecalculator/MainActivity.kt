@@ -200,7 +200,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         }
 
                         Operations.Division.name -> {
-                            textView.text = ((operand1 / operand2).toString())
+                            var result = (operand1.toDouble() / operand2.toDouble())
+                           /* var finalResult = result.toBigDecimal().setScale(1, RoundingMode.UP).toDouble()*/
+                            textView.text = result.toString()
 
                         }
                         Operations.Mod.name -> {
