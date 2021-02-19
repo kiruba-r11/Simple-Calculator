@@ -102,51 +102,84 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.addButton -> {
-                if (!(textView.text.toString()).isNullOrEmpty()) {
-                    operand1 = (textView.text.toString()).toBigDecimal()
-                    operation = Operations.Addition.name
-                    textView.text = null
-                } else {
+                try {
+                    if (!(textView.text.toString()).isNullOrEmpty()) {
+                        operand1 = (textView.text.toString()).toBigDecimal()
+                        operation = Operations.Addition.name
+                        textView.text = null
+                    } else {
+                        textView.text = "+"
+                    }
+                } catch (e: NumberFormatException) {
                     textView.text = "+"
+
                 }
+
             }
 
             R.id.subButton -> {
-                if (!(textView.text.toString()).isNullOrEmpty()) {
-                    operand1 = (textView.text.toString()).toBigDecimal()
-                    operation = Operations.Subtraction.name
-                    textView.text = null
-                } else {
+                try {
+                    if (!(textView.text.toString()).isNullOrEmpty()) {
+                        operand1 = (textView.text.toString()).toBigDecimal()
+                        operation = Operations.Subtraction.name
+                        textView.text = null
+                    } else {
+                        textView.text = "-"
+                    }
+                } catch (e: NumberFormatException) {
                     textView.text = "-"
+
                 }
             }
 
             R.id.mulButton -> {
-                if (!(textView.text.toString()).isNullOrEmpty()) {
-                    operand1 = (textView.text.toString()).toBigDecimal()
-                    operation = Operations.Multiplication.name
-                    textView.text = null
+                try {
+                    if (!(textView.text.toString()).isNullOrEmpty()) {
+                        operand1 = (textView.text.toString()).toBigDecimal()
+                        operation = Operations.Multiplication.name
+                        textView.text = null
+                    }
+                } catch (e: NumberFormatException) {
+                    textView.text = ""
+
                 }
             }
 
-            R.id.divButton -> {
-                if (!(textView.text.toString()).isNullOrEmpty()) {
-                    operand1 = (textView.text.toString()).toBigDecimal()
-                    operation = Operations.Division.name
-                    textView.text = null
-                }
 
+            R.id.divButton -> {
+                try {
+                    if (!(textView.text.toString()).isNullOrEmpty()) {
+                        operand1 = (textView.text.toString()).toBigDecimal()
+                        operation = Operations.Division.name
+                        textView.text = null
+                    }
+
+                } catch (e: NumberFormatException) {
+                    textView.text = ""
+
+                }
             }
 
             R.id.modButton -> {
-                if (!(textView.text.toString()).isNullOrEmpty()) {
-                    operand1 = (textView.text.toString()).toBigDecimal()
-                    operation = Operations.Mod.name
-                    textView.text = null
+                try {
+                    if (!(textView.text.toString()).isNullOrEmpty()) {
+                        operand1 = (textView.text.toString()).toBigDecimal()
+                        operation = Operations.Mod.name
+                        textView.text = null
+                    }
+
+                } catch (e: NumberFormatException) {
+                    textView.text = ""
+
                 }
+
             }
 
             R.id.equalButton -> {
+                if ((textView.text.toString()).isNullOrEmpty()) {
+                    return
+                }
+
                 operand2 = (textView.text.toString()).toBigDecimal()
 
                 try {
