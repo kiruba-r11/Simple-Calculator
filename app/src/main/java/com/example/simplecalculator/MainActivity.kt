@@ -94,7 +94,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.dotButton -> {
-                textView.text = "${textView.text}."
+                if (textView.text.contains(".").not()) {
+                    textView.text = "${textView.text}."
+                }
             }
 
             R.id.acButton -> {
