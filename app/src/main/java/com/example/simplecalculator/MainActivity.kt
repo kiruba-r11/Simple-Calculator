@@ -180,9 +180,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     return
                 }
 
-                operand2 = (textView.text.toString()).toBigDecimal()
-
                 try {
+                    operand2 = (textView.text.toString()).toBigDecimal()
+
                     when (operation) {
                         Operations.Addition.name -> {
                             textView.text = ((operand1 + operand2).toString())
