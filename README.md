@@ -33,5 +33,3 @@ A simple calculator app using TextViews and Buttons which can perform five basic
 </table>
 
 **_Note:_ This `Simple Calculator` App works only for two operands (without error).**
-
-**_Note:_ This repository is under working process.**
