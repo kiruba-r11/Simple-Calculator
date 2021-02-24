@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "kiruba-r11",
+      "name": "Kirubanand R",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76843281?v=4",
+      "profile": "https://github.com/kiruba-r11",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Simple-Calculator",
+  "projectOwner": "kiruba-r11",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
