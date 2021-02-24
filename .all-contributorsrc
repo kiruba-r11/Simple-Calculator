@@ -11,7 +11,17 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/79189116?v=4",
       "profile": "https://github.com/PavanBilagiHalodoc",
       "contributions": [
-        "code"
+      "code"
+      ]
+    },
+    {
+      "login": "kiruba-r11",
+      "name": "Kirubanand R",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76843281?v=4",
+      "profile": "https://github.com/kiruba-r11",
+      "contributions": [
+        "code",
+        "doc"
       ]
     }
   ],
